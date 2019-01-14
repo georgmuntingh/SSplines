@@ -136,7 +136,7 @@ def alternative_basis_transform_quadratic(exact = False):
 
     return T
 
-def alternative_basis_transform_cubic(exact = False)
+def alternative_basis_transform_cubic(exact = False):
     if exact:
         T = np.identity(16, dtype = object)
         T[12:16,12:16] = np.array([[Fraction(3,4),            0,            0,Fraction(1,4)], \
@@ -498,7 +498,7 @@ def evaluate_non_zero_basis_derivatives(d, r, b, a, k, exact = False, alternativ
     """
     s = np.ones((len(b), 1))
     r_matrices = [r1, r2, r3]
-    u_matrices = [u1, u2] # TODO: add u3
+    u_matrices = [u1, u2, u3] # TODO:: add u3
     R = [r_matrices[i](b) for i in range(d)]
     U = [u_matrices[i](a) for i in range(d)]
 
